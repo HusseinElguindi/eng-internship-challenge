@@ -6,7 +6,7 @@ June 28, 2024
 
 from string import ascii_uppercase
 from abc import ABC, abstractmethod
-from typing import Any, Final, Generator
+from typing import Final
 from itertools import chain
 
 
@@ -92,7 +92,7 @@ class PlayfairCipher(Cipher):
             self.__adjacency[char] = divmod(table_index, self.__dimension)
             table_index += 1
 
-    def __digrams(self, text: str) -> Generator[tuple[str, str], Any, None]:
+    def __digrams(self, text: str): # -> Generator[tuple[str, str], Any, None]:
         """
         A generator function yielding consecutive digrams from a string
 
